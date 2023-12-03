@@ -7,7 +7,7 @@ cpp_file="day_01.cpp"
 output_name="day_01.so"
 
 # Compile the C++ program
-g++ -Wall -std=c++17 -o $output_name $cpp_file
+g++ -Wall -std=c++20 -o $output_name $cpp_file
 
 # Check if compilation was successful
 if [ $? -eq 0 ]; then
