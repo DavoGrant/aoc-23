@@ -32,4 +32,4 @@ tmtagsHistory
 .bundle
 
 # Data.
-.txt
+*.txt
