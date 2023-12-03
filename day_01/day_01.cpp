@@ -38,7 +38,7 @@ int sumOfCalibrationValues(const std::string& file_name) {
 
 
 int main() {
-    int result = sumOfCalibrationValues("data_test.txt");
+    int result = sumOfCalibrationValues("data_real.txt");
     std::cout << "Total calibration values = " << result << std::endl;
     return 0;
 }
