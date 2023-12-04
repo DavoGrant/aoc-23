@@ -112,37 +112,6 @@ int sumOfPartNumbers(const std::string& file_name) {
 }
 
 
-int sumOfGearRatios(const std::string& file_name) {
-
-    std::string line_a;
-    std::string line_b;
-    std::string line_c;
-    std::ifstream f (file_name);
-
-    int sum = 0;
-    if (f.is_open()) {
-
-        getline(f, line_a);
-        getline(f, line_b);
-
-        sum += sumLineGears(line_b, line_a, line_b);  // Top line.
-        while (getline(f, line_c)) {
-
-            sum += sumLineGears(line_a, line_b, line_c);  // Main lines.
-
-            line_a = line_b;
-            line_b = line_c;
-        }
-        sum += sumLine(line_a, line_b, line_a);  // Last line.
-
-    } else {
-        perror("Error opening file");
-    }
-
-    return sum;
-}
-
-
 int main() {
     int result = sumOfPartNumbers("data_real.txt");
     std::cout << "Total of part numbers = " << result << std::endl;
